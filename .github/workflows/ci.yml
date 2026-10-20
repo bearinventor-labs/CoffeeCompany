@@ -1,0 +1,29 @@
+name: CI Verification
+
+on:
+    push:
+        branches:
+            - main
+            - beta
+            - release
+    pull_request:
+        branches:
+            - main
+            - beta
+            - release
+
+jobs:
+    check:
+        name: cargo-check
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            
+            - name: Install Rust Nightly
+              uses: dtolnay/rust-toolchain@nightly
+              with:
+                    targets: thumbv4t-none-eabi
+                    components: rust-src
+
+            - name: Run Cargo Check
+              run: cargo check --target thumbv4t-none-eabi
