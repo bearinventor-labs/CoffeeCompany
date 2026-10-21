@@ -1,10 +1,16 @@
 # GitHub Workflow and Branch Guidelines
 
-## Branch Naming Policy
+## Table of Contents
+
+- [Branch Naming Policy](#allowed-prefixes)
+
+
+### Branch Naming Policy
+
 All branches created from "main" must adhere to the following convention:
 
 
+#### Allowed Prefixes
 
-### Allowed Prefixes
 - 'feature/'    : New mechanics, UI, or engine updates.
 - 'docs/'       : Documentation and roadmap edits. 
